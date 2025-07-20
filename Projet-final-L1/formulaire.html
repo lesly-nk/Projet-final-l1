@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos activités - les travaux des dames du quartier</title>
+        <link href="indexx.css" rel="stylesheet">
+        <style>
+            .form-inscription {
+    background: rgba(255,255,255,0.92);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(30,60,114,0.10);
+    padding: 2.2rem 2.5rem 2.2rem 2.5rem;
+    max-width: 600px;
+    margin: 2.5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    border: 1.5px solid #e3e7f7;
+}
+.form-inscription h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 1.6rem;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    margin-bottom: 0.2em;
+}
+.form-inscription p {
+    text-align: center;
+    color: #5a4a3c;
+    font-size: 1.05rem;
+    margin-bottom: 1.2em;
+}
+.form-inscription label {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: #335;
+    letter-spacing: 0.5px;
+    font-size: 1.05em;
+}
+.form-inscription input,
+.form-inscription select,
+.form-inscription textarea {
+    padding: 0.7rem 1.1rem 0.7rem 2.5rem;
+    border: 1.5px solid #e3e7f7;
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(30,60,114,0.04);
+    color: #222;
+    position: relative;
+}
+.form-inscription input:focus,
+.form-inscription select:focus,
+.form-inscription textarea:focus {
+    border: 1.5px solid #007bff;
+    outline: none;
+    background: #fff;
+}
+
+.form-inscription .btn {
+    background: #fff;
+    color: #111;
+    border: 1.5px solid #111;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: none;
+    transition: none;
+    text-decoration: none;
+    padding: 0.9rem 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 0.7rem;
+}
+
+.form-inscription .btn:hover {
+    background: linear-gradient(135deg, #2196F3 60%, #1A237E 100%);
+    color: #fff;
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px rgba(33, 150, 243, 0.13);
+}
+
+.form-inscription textarea {
+    resize: vertical;
+    min-height: 80px;
+    max-height: 200px;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="accueil">
+                    <h2 class="damehood-title">DAMEHOOD</h2>
+                </div>
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                    <div class="liens" id="nav-links">
+                    <a href="indexx.html">Accueil</a>
+                    <a href="propos.html">À propos</a>
+                    <a href="activite.html">Nos activités</a>
+                    <a href="galerie.html">Galerie</a>
+                    <a href="programmes.html">Programme</a>
+                    <a href="formulaire.html">formulaire</a>
+                </div>
+            </nav>
+        </header>
+        <section class="conteneur">
+            <div class="pop">
+                <form action="#" method="POST" class="form-inscription">
+                    <h2>Rejoignez-nous !</h2>
+                    <p>Inscrivez-vous pour participer aux activités du dimanche et faire partie de notre communauté solidaire.</p>
+                    
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" required placeholder="ex : Ndaya Kalemba Lesly">
+                    
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" required placeholder="ex : ndayalesly@gmail.com">
+                    
+                    <label for="telephone">Numéro de téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="ex : +243 842115825">
+                    
+                    <label for="age">Âge</label>
+                    <input type="number" id="age" name="age" min="18" max="100" placeholder="ex : 32">
+                    
+                    <label for="quartier">Quartier de résidence</label>
+                    <input type="text" id="quartier" name="quartier" required placeholder="ex : kinsuka pêcheurs">
+                    
+                    <label for="interets">Activités qui vous intéressent</label>
+                    <textarea id="interets" name="interets" rows="4" placeholder="ex : Cuisine, jardinage, couture..."></textarea>
+                    
+                    <label for="disponibilite">Disponibilité</label>
+                    <select id="disponibilite" name="disponibilite">
+                        <option value="">Choisissez votre disponibilité</option>
+                        <option value="tous-dimanches">Tous les dimanches</option>
+                        <option value="occasionnel">Occasionnellement</option>
+                        <option value="evenements">Seulement pour les événements spéciaux</option>
+                    </select>
+                    
+                    <label for="message">Message optionnel</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Tout ce que vous souhaitez nous dire..."></textarea>
+                    
+                    <button type="submit" class="btn">S'inscrire</button>
+                </form>
+            </div>
+        </section>
+        <footer class="pieds">
+            <div class="machin">
+                <h3 class="titre">DAMEHOOD</h3>
+                <p class="description">Un réseau solidaire de femmes engagées pour transformer leur quartier chaque dimanche.<br>Rejoignez-nous pour partager, apprendre, agir et inspirer !</p>
+            </div>
+                <div class="machin">
+                    <h3 class="title">Contact</h3>
+                    <div class="footer-contact">
+                        <p>femmesduquartier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bas-pied">
+                <p>© 2025 les femmes du quartier - Tous droits réservés</p>
+            </div>
+        </footer>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('ouvert');
+            });
+            </script>
+    </body>
+</html>

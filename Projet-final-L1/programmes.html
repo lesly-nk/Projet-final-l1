@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programme des dimanches 2025</title>
+        <link href="indexx.css" rel="stylesheet">
+    
+        <style>
+            body {
+                background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+                font-family: Arial, sans-serif;
+                margin: 0;
+                min-height: 100vh;
+            }
+            .conteneurprogramme {
+                max-width: 500px;
+                margin: 3em auto;
+                background: #fff;
+                border-radius: 18px;
+                box-shadow: 0 6px 24px rgba(33, 150, 243, 0.10);
+                padding: 2em 2em 2.5em 2em;
+            }
+            .titreprogramme {
+                text-align: center;
+                color: #7b1fa2;
+                margin-bottom: 1.5em;
+                font-size: 2em;
+            }
+            .selectdimanche {
+                width: 100%;
+                padding: 0.7em 1em;
+                border-radius: 10px;
+                border: 1.5px solid #b39ddb;
+                font-size: 1.1em;
+                background: #f3e5f5;
+                color: #512da8;
+                margin-bottom: 2em;
+                outline: none;
+                transition: border 0.2s;
+            }
+            .selectdimanche:focus {
+                border: 2px solid #7e57c2;
+            }
+            .programmejour {
+                background: #ede7f6;
+                border-radius: 12px;
+                padding: 1.2em 1.5em;
+                box-shadow: 0 2px 8px rgba(123, 31, 162, 0.08);
+                color: #4527a0;
+                font-size: 1.1em;
+                display: none;
+                margin-top: 1em;
+            }
+            .programmejour.active {
+                display: block;
+            }
+        </style>
+    </head>
+    <header>
+        <nav>
+            <div class="accueil">
+                <h2 class="damehood-title">DAMEHOOD</h2>
+            </div>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+                    <div class="liens" id="nav-links">
+                <a href="indexx.html">Accueil</a>
+                <a href="propos.html">À propos</a>
+                <a href="activite.html">Nos activités</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="programmes.html">Programme</a>
+                <a href="formulaire.html">formulaire</a>
+                
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="conteneurprogramme">
+            <h1 class="titreprogramme">Programme des dimanches à venir</h1>
+            <select class="selectdimanche" id="selectdimanche">
+                <option value="">Choisissez un dimanche</option>
+            </select>
+            <div id="programmejour" class="programmejour"></div>
+        </div>
+        <script>
+            
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('ouvert');
+            });
+
+            const select = document.getElementById('selectdimanche');
+            const programmeDiv = document.getElementById('programmejour');
+            const aujourdHui = new Date();
+            const activites = [
+                { nom: "Nettoyage du quartier", description: "Nous nous retrouvons pour nettoyer les rues principales et sensibiliser au tri des déchets.", heure: "12h-16h" },
+                { nom: "Atelier cuisine", description: "Atelier de cuisine collective : partage de recettes et dégustation.", heure: "14h-18h" },
+                { nom: "Jardinage collectif", description: "Plantation de fleurs et entretien du jardin partagé.", heure: "12h-16h" },
+                { nom: "Atelier couture", description: "Initiation à la couture et création de sacs en tissu.", heure: "16h-18h" },
+                { nom: "Jeux en famille", description: "Après-midi jeux de société et animations pour petits et grands.", heure: "15h-17h" },
+                { nom: "Atelier bien-être", description: "Séance de relaxation, yoga et conseils bien-être.", heure: "14h-16h" },
+                { nom: "Atelier lecture", description: "Lecture partagée et échanges autour de livres inspirants.", heure: "16h-18h" },
+                { nom: "Décoration quartier", description: "Création de décorations pour embellir le quartier.", heure: "14h-16h" },
+                { nom: "Atelier bricolage", description: "Petits travaux manuels et réparation d'objets.", heure: "16h-18h" },
+                { nom: "Atelier chant/danse", description: "Chant et danse collective pour renforcer la cohésion.", heure: "15h-17h" },
+            ];
+            
+            let date = new Date(Math.max(aujourdHui, new Date('2025-01-01')));
+            date.setHours(0,0,0,0);
+            
+            if (date.getDay() !== 0) {
+                date.setDate(date.getDate() + (7 - date.getDay()));
+            }
+            while (date.getFullYear() === 2025) {
+                const value = date.toISOString().slice(0,10);
+                const label = date.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                select.innerHTML += `<option value="${value}">${label.charAt(0).toUpperCase() + label.slice(1)}</option>`;
+                date.setDate(date.getDate() + 7);
+            }
+            
+            select.addEventListener('change', function() {
+                const val = this.value;
+                if (!val) {
+                    programmeDiv.classList.remove('active');
+                    programmeDiv.innerHTML = '';
+                    return;
+                }
+                
+                const index = Array.from(this.options).findIndex(opt => opt.value === val) - 1;
+                const activite = activites[index % activites.length];
+                const dateObj = new Date(val);
+                const dateStr = dateObj.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                programmeDiv.innerHTML = `<h2>${activite.nom}</h2><p><strong>Date :</strong> ${dateStr.charAt(0).toUpperCase() + dateStr.slice(1)}</p><p><strong>Heure :</strong> ${activite.heure}</p><p>${activite.description}</p>`;
+                programmeDiv.classList.add('active');
+            });
+        </script>
+        <footer class="pieds">
+            <div class="machin">
+                <h3 class="titre">DAMEHOOD</h3>
+                <p class="description">Un réseau solidaire de femmes engagées pour transformer leur quartier chaque dimanche.<br>Rejoignez-nous pour partager, apprendre, agir et inspirer !</p>
+            </div>
+                <div class="machin">
+                    <h3 class="title">Contact</h3>
+                    <div class="footer-contact">
+                        <p>femmesduquartier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bas-pied">
+                <p>© 2025 les femmes du quartier - Tous droits réservés</p>
+            </div>
+        </footer>
+    </body>
+    </html>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos activités - les travaux des dames du quartier</title>
+        <link href="indexx.css" rel="stylesheet">
+        <style>
+            .carnet-body {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 2rem;
+}
+
+
+.carnet-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.pap {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+
+.pap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #e74c3c, #3498db);
+    border-radius: 2px;
+}
+
+.carnet-container p {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+
+.bab {
+    margin: 2rem 0;
+}
+
+
+.bab a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: none;
+    box-shadow: none;
+    background:#00695c;
+}
+
+
+.bab a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #2196F3 60%, #1A237E 100%);
+}
+
+
+.carnet-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+
+.carnet-container ul li {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 3rem;
+    transition: all 0.3s ease;
+}
+
+
+.carnet-container ul li:hover {
+    transform: translateX(10px);
+    background: #e8f4f8;
+}
+
+
+.carnet-container ul li::before {
+    content: '→';
+    position: absolute;
+    left: 1rem;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.carnet-container ul li strong {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
+    margin: 2rem 0;
+}
+@media (max-width: 700px) {
+    .carnet-body {
+        padding: 0.5rem;
+    }
+    .carnet-container {
+        padding: 1.2rem;
+    }
+    .pap {
+        font-size: 1.5rem;
+    }
+    .bab a {
+        padding: 0.7rem 1rem;
+        font-size: 1em;
+    }
+    .carnet-container ul li {
+        font-size: 1em;
+        padding: 0.7rem 1rem 0.7rem 2.2rem;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="accueil">
+                    <h2 class="damehood-title">DAMEHOOD</h2>
+                </div>
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                    <div class="liens" id="nav-links">
+                    <a href="indexx.html">Accueil</a>
+                    <a href="propos.html">À propos</a>
+                    <a href="activite.html">Nos activités</a>
+                    <a href="galerie.html">Galerie</a>
+                    <a href="programmes.html">Programme</a>
+                    <a href="formulaire.html">formulaire</a>
+                </div>
+            </nav>
+        </header>
+        <div class="carnet-body">
+            <div class="carnet-container">
+                <h1 class="pap">Qui sommes-nous ?</h1>
+            <p>Damehood est un projet né du coeur des quartiers, porté par l'énergie des femmes et soutenu par toutes les bonnes volonté.
+                Chaque dimanche, nous transformons des coins oubliés en lieux vivants, propres, solidaires, Mais Damehood, c'est plus qu'un nettoyage ou une rencontre - c'est un mouvement, un élan collectif pour réprendre soin de nos voisins, ett de notre avenir.
+            </p> 
+            <h2 class="pap">Notre mission ?</h2>
+            <hr/>
+            <p>Nous croyons que des petits gestes, répétés chaque semaine, peuvent faire une grande différence.
+                À travers les travaux des dames du quartier, les discussions partagées, les liens tissés, nous reconstruisons du lien social et un cadre de vie plus juste.
+                notre mission: <strong>réveiller l'esprit communautaire</strong> et <strong>réinvestir les espaces pulics avec fierté.</strong>
+            </p>
+                <ul>
+                    <li>Créer un espace de rencontre et de solidarité entre femmes</li>
+                    <li>Valoriser les talents, les savoir-faire et les initiatives locales</li>
+                    <li>Agir concrètement pour  améliorer notre cadre de vie</li>
+                    <li>Encourager l'autonomie, la participation et l'expression de chacune</li>
+                </ul>
+                <h2 class="pap">Des témoignages inspirants</h2>
+                <hr/>
+                <p>Chaque dimanche laisse une empreinte.
+                    Des habitantes nous disent comment cela a changé leur quotidien, comment un simple bonjour dans la rue ou un coup de balai peut ramener le sourire.
+                    ces mots, ces récits, nous encouragent à aller plus loin.
+                </p>
+                <ul>
+                    <li><strong>Entraide:</strong> personne n'est seule, toutes les mains comptent.</li>
+                    <li><strong>Engagement:</strong> chaque action compte, chaque dimanche est une étape.</li>
+                    <li><strong>Égalité:</strong>toutes les femmes sont les bienvenues, sans distinction.</li>
+                    <li><strong>Joie:</strong> parce qu'agir ensemble peut aussi rimer avec plaisir et fierté</li>
+                </ul>
+                <nav class="bab">
+                    <a href="temoignage.html">Lis les temoignages</a>
+                </nav>
+                <h2 class="pap">Une initiative qui soulève des questions</h2>
+                <hr/>
+                <p>Tu te demandes comment réjoindre, qui peut venir, si c'est gratuit ou encore comment ça se passe en cas de pluie ?
+                    Ne t'inquiète pas , on a rassemblé les reponses aux questions les plus fréquentes pour  t'aider à te lancer sereinement.
+                </p>
+                <nav class="bab">
+                    <a href="faq.html">Consulte notre FAQ</a>
+                </nav>
+                <hr/>
+                <h2 class="pap">Envie de t'engager ?</h2>
+                <p>Tu veux mettre la main à la pâte ? Tu souhaites proposer une idée ou simplement être là ? Rejoindre le mouvement est aussi simple que de venir un dimanche ou de s'inscrire pour donner un coup de main.</p>
+                <nav class="bab">
+                    <a href="formulaire.html">Rejoins le mouvement</a>
+                </nav>
+                <hr/>
+                <h2 class="pap">Une communauté ouverte à tous</h2>
+                <p>
+                    Si notre initiative est centrée sur les femmes, elle s'adresse aussi à toute la communauté. Les enfants, les jeunes, les voisins, les partenaires sont les bienvenus pour encourager, accompagner ou soutenir nos actions.
+                </p>
+            </div>
+        </div>
+        <footer class="pieds">
+            <div class="machin">
+                <h3 class="titre">DAMEHOOD</h3>
+                <p class="description">Un réseau solidaire de femmes engagées pour transformer leur quartier chaque dimanche.<br>Rejoignez-nous pour partager, apprendre, agir et inspirer !</p>
+            </div>
+                <div class="machin">
+                    <h3 class="title">Contact</h3>
+                    <div class="footer-contact">
+                        <p>femmesduquartier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bas-pied">
+                <p>© 2025 les femmes du quartier - Tous droits réservés</p>
+            </div>
+        </footer>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('ouvert');
+            });
+            </script>
+    </body>
+</html>

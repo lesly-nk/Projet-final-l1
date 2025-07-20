@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ - les travaux des dames du quartier</title>
+        <link href="indexx.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            .faq-body {
+    background: linear-gradient(120deg, #f9e7fe 0%, #e3f6fd 100%);
+    min-height: 100vh;
+    font-family: 'Nunito', 'Poppins', Arial, sans-serif;
+}
+.faq-section {
+    max-width: 700px;
+    margin: 2.5rem auto 2rem auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 22px;
+    box-shadow: 0 6px 32px rgba(176,106,179,0.08);
+    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+    position: relative;
+}
+.faq-section h1 {
+    color: #b06ab3;
+    font-size: 2.2em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+.faq-section h1::before {
+    content: '\f059';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #e67e22;
+    font-size: 1.1em;
+    margin-right: 0.3em;
+}
+.faq-section p {
+    text-align: center;
+    color: #6c4a7a;
+    margin-bottom: 2em;
+    font-size: 1.1em;
+}
+.faq-item {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(176,106,179,0.07);
+    margin-bottom: 1.3em;
+    border-left: 6px solid #b06ab3;
+    animation: fadeInFaq 0.7s;
+    overflow: hidden;
+}
+@keyframes fadeInFaq {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.faq-question {
+    width: 100%;
+    background: linear-gradient(90deg, #b06ab3 60%, #e67e22 100%);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1.08em;
+    font-family: 'Nunito', 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    padding: 1.1em 1.2em;
+    border-radius: 14px 14px 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s, color 0.2s;
+}
+ .faq-question:focus {
+    background: linear-gradient(90deg, #e67e22 60%, #b06ab3 100%);
+    color: #fff;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9e7fe;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+    border-radius: 0 0 14px 14px;
+}
+.faq-answer p {
+    margin: 0;
+    padding: 1.2em 1.5em;
+    color: #6c4a7a;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.btn-retour{
+    text-align: center;
+    color: #004d40;
+    background: linear-gradient(90deg, #b06ab3 60%, #e67e22 100%);
+    border-radius:30px;
+    border: 2px solid #007bff;
+    box-shadow: 0 2px 8px rgba(44,83,131,0.07);
+}
+.faq-footer {
+    text-align: center;
+    margin: 2em 0 1em 0;
+}
+        </style>
+    </head>
+    <body class="faq-body">
+       <section class="faq-section">
+            <h1>Questions fréquentes</h1>
+            <p>Toutes les réponses aux questions que vous vous posez.</p>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Comment participer aux activités du dimanche ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Il suffit de venir nous rejoindre chaque dimanche matin sur le lieu indiqué dans le calendrier. Aucune inscription formelle n'est obligatoire, votre présence est le plus important !</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Faut-il être membre pour participer ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Non, nos activités sont ouvertes à toutes les femmes du quartier, qu'elles soient membres ou non. La solidarité n'a pas de carte de membre.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Les hommes peuvent-ils rejoindre ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Bien sûr. Même si l'initiative est portée par les dames du quartier, tous les soutiens, encouragements et coups de main sont les bienvenus.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Que faut-il apporter ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Votre bonne humeur, un sourire, et l'envie de faire bouger les choses ! Pour les ateliers spécifiques (cuisine, couture), consultez le calendrier pour plus de détails.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Et s'il pleut ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>On adapte ! Parfois on décale, parfois on se réfugie sous un abri pour des activités plus calmes, mais on essaie toujours de maintenir le lien.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Est-ce que c'est payant ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Non. La participation est totalement gratuite. L'initiative repose sur la volonté et la contribution volontaire de chacune.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Puis-je venir avec mes enfants ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui ! Les enfants sont les bienvenus. C'est une excellente occasion de leur transmettre des valeurs de partage et d'entraide, et des activités leur sont souvent dédiées.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Comment puis-je aider autrement ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Vous pouvez aider à l'organisation, à la communication sur les réseaux sociaux, proposer des idées, prêter du matériel, ou même faire un don de denrées pour les ateliers cuisine.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Comment sont organisés les ateliers ?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Chaque atelier est soigneusement planifié pour répondre aux besoins et aux intérêts des participants. La structure est la suivante:</p>
+                    <ul>
+                        <li>Responsable d'atelier: une dame experimentée ou formée dans le domaine spécifique nime l'atelier.</li>
+                        <li>Assistantes: deux à trois dames assistent la responsable pour encadrer les participantes et assurer le bon déroulement.</li>
+                        <li>Participantes: ouvert à toutes les dames du quartier, sans distinction d'âge ou de compétence.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="faq-footer">
+            <a href="propos.html" class="btn-retour"> Retour</a>
+        </div>
+
+        <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+
+                    button.classList.toggle('active');
+                    
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    } 
+                });
+            });
+        </script>
+    </body>
+</html>

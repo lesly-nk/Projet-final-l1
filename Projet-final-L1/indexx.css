@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f9fafc;
+    background: linear-gradient(135deg, #e3e7f7 0%, #f9fafc 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 120px;
+}
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+.liens{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin-left: auto;
+}
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    transition: none;
+    margin: 0 0.1rem;
+    background: transparent;
+}
+nav a:hover, .liens a.active {
+    background: linear-gradient(135deg, #2196F3 60%, #1A237E 100%);
+    color: #fff;
+}
+
+.pieds {
+    background: linear-gradient(135deg, #e3eeff 0%, #f5fcf7 100%);
+    color: #222;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -4px 24px rgba(44, 83, 131, 0.07);
+    padding: 2.5rem 2rem 1.2rem 2rem;
+    margin-top: 3rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.machin {
+    flex: 1 1 300px;
+    min-width: 220px;
+}
+
+.titre {
+    font-size: 1.5rem;
+    color: #00695c;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.title{
+    text-align: right;
+    color: #00695c;
+    font-size: 1.5rem;
+    color: #00695c;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+.description {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.footer-contact p {
+    font-size: 1.05rem;
+    color: #00695c;
+    margin: 0.5rem 0 0 0;
+    font-weight: 500;
+    text-align: right;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #007bff 40%, #00bcd4 60%, transparent);
+    margin: 2rem 0 1.2rem 0;
+    border-radius: 2px;
+    width: 100%;
+}
+.bas-pied {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #888;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 900px) {
+    .pieds {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 1.5rem 0.7rem 0.7rem 0.7rem;
+    }
+    .machin {
+        width: 100%;
+        text-align: left;
+    }
+    .footer-contact p {
+        text-align: left;
+    }
+    .bas-pied {
+        margin-top: 1.2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 900px) {
+    .pieds {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 1.2rem 0.5rem;
+    }
+    .machin {
+        width: 100%;
+        text-align: left;
+    }
+    .bas-pied {
+        margin-top: 1.2rem;
+        text-align: center;
+    }
+}
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #007bff;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1em;
+    z-index: 200;
+    position: static;
+}
+.liens {
+    display: flex;
+    gap: 1.5em;
+    margin-left: 2em;
+}
+@media (max-width: 900px) {
+    .liens {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 220px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        border-radius: 0 0 12px 12px;
+        z-index: 100;
+    }
+    .liens.ouvert {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+        position: static;
+        margin-left: auto;
+        margin-right: 1em;
+        top: auto;
+        right: auto;
+        transform: none;
+    }
+    .navigation {
+        justify-content: flex-start;
+    }
+} 

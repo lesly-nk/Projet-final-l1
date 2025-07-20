@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ma page</title>
+        <link href="indexx.css" rel="stylesheet">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        temoiganges-body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .temoignage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .carte-temoignage {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .carte-temoignage:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        blockquote {
+            font-style: italic;
+            margin-top: 10px;
+            color: #555;
+        }
+        
+        blockquote footer {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #777;
+            
+        }
+        .temoignages-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .btn-retour {
+            display: inline-block;
+            background-color:  pink;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius:15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-retour:hover {
+            background-color: #555;
+        }
+        @media (max-width: 600px) {
+            .carte-temoignage {
+                padding: 15px;
+            }
+        
+            .avatar {
+                width: 60px;
+                height: 60px;
+            }
+        
+            .btn-retour {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+        </style>
+    </head>
+    
+    <body class="temoignages-body">
+        <section class="temoignage">
+            <div class="carte-temoignage">
+                <img src="image /a01b704c-8151-46fd-9101-0673d8938a7e.jpg" class="avatar">
+                <blockquote>
+                    <p>"Chaque dimanche, c'est une bouffée de joie. On se retrouve entre voisines, on apprend, on partage."</p>
+                    <footer>- Keren, 36 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /6b8d8e39-9f4a-4e91-89bd-307ea0683b2c.jpg" class="avatar">
+                <blockquote>
+                    <p>"J'ai découvert des talents cachés en moi. Grâce aux ateliers, j'ai même lancé ma petite activité !"</p>
+                    <footer>- Madame Magnificat, 52 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /6f1d26cd-642a-4d6d-87f3-b9ff489d7d40.jpg" class="avatar">
+                <blockquote>
+                    <p>"Ce projet m'a redonné confiance. On se sent utile, entourée et fière de ce que l'on construit ensemble."</p>
+                    <footer>- Daniela, 20 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /IMG_6708.jpg" class="avatar">
+                <blockquote>
+                    <p>"Même à mon âge, j'ai trouvé ma place. Les jeunes nous respectent, et on se sent valorisées."</p>
+                    <footer>- Mamie Monica, 64 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /c2b7c09b-a437-412a-9f96-63205df480fe.JPG" class="avatar">
+                <blockquote>
+                    <p>"On partage plus que des activités, c'est devenu une famille. Ces dimanches sont sacrés pour moi."</p>
+                    <footer>- Mireille, 23 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /IMG_6025.jpg" class="avatar">
+                <blockquote>
+                    <p>"Je viens avec mes enfants. Ils apprennent le respect, l'entraide et la vie en communauté."</p>
+                    <footer>- Luisella, 38 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /62119c9e-f2ea-49a4-8290-368590388817.jpg"  class="avatar">
+                <blockquote>
+                    <p>"J'adore quand on fait les travaux manuels ! C'est amusant et j'apprends plein de trucs avec les grandes dames."</p>
+                    <footer>- Gemima, 11 ans</footer>
+                </blockquote>
+            </div>
+
+            <div class="carte-temoignage">
+                <img src="image /d6bd9085-24b7-463d-a4b3-bbb0a3e9671d.jpg"class="avatar">
+                <blockquote>
+                    <p>"J'étais isolée après la retraite. Maintenant, j'ai trouvé ma place, des rires et des projets !"</p>
+                    <footer>- Tante Lesly, 60 ans</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <div class="temoignages-footer">
+            <a href="propos.html" class="btn-retour"><i class="fas fa-arrow-left"></i> Retour</a>
+        </div>
+    </body>
+</html>

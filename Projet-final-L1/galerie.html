@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos activités - les travaux des dames du quartier</title>
+        <link href="indexx.css" rel="stylesheet">
+        <style>
+          .galerie-containeur {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: none;
+}
+
+.galerie-containeur h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.galerie-containeur h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #e74c3c, #3498db);
+    border-radius: 2px;
+}
+
+.galerie-intro {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+.categorie-slider {
+    margin-bottom: 6rem;
+    background: none;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.categorie-slider:hover {
+    transform: translateY(-5px);
+}
+
+.categorie-slider h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.categorie-slider h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #e74c3c;
+    border-radius: 2px;
+}
+
+.slider-containeur {
+    position: relative;
+    max-width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.slider-containeur:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    background: none;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.slider-containeur:hover .slider-btn {
+    opacity: 1;
+}
+
+.slider-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.slider-btn.prev {
+    left: 30px;
+}
+
+.slider-btn.next {
+    right: 30px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+  
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="accueil">
+                    <h2 class="damehood-title">DAMEHOOD</h2>
+                </div>
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                    <div class="liens" id="nav-links">
+                    <a href="indexx.html">Accueil</a>
+                    <a href="propos.html">À propos</a>
+                    <a href="activite.html">Nos activités</a>
+                    <a href="galerie.html">Galerie</a>
+                    <a href="programmes.html">Programme</a>
+                    <a href="formulaire.html">formulaire</a>
+                </div>
+            </nav>
+        </header>
+        <div class="galerie-containeur">
+            <h1>Nos souvenirs en images</h1>
+            <p class="galerie-intro">Découvrez les moments forts de nos rencontres hebdomadaires</p>
+ 
+            <div class="categorie-slider">
+                <h2>Ateliers de partage de savoir-faire</h2>
+                <div class="slider-containeur">
+                    <div class="slider">
+                        <div class="slide-active">
+                            <img src="image /IMG_8411.JPG" alt="Atelier 1">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8412.JPG" alt="Atelier 2">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8413.JPG" alt="Atelier 3">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8414.JPG" alt="Atelier 4">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8415.JPG" alt="Atelier 5">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8416.JPG" alt="Atelier 6">
+                        </div>
+                        <div class="slide">
+                             <img src="image /IMG_9165.jpg" alt="Atelier 7">
+                        </div>
+                        <div class="slide">
+                         <img src="image /IMG_9166.jpg" alt="Atelier 8">
+                        </div>
+                        <div class="slide">
+                          <img src="image /IMG_8386.JPG" alt="Atelier">
+                       </div>
+                    </div>
+                    <button class="slider-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+ 
+            <div class="categorie-slider">
+                <h2>Travaux du quartier</h2>
+                <div class="slider-containeur">
+                    <div class="slider">
+                        <div class="slide-active">
+                            <img src="image /IMG_8436 3.JPG" alt="Travaux 1">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8437 3.JPG" alt="Travaux 2">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8438 3.JPG" alt="Travaux 3">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8439 3.JPG" alt="Travaux 4">
+                        </div>
+                        <div class="slide">
+                         <img src="image /IMG_8385.JPG" alt="Atelier">
+                      </div>
+                    </div>
+                    <button class="slider-btn prev">
+                        </i><i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+ 
+            <div class="categorie-slider">
+                <h2>Ateliers éducatifs</h2>
+                <div class="slider-containeur">
+                    <div class="slider">
+                        <div class="slide-active">
+                            <img src="image /IMG_8452.JPG" alt="Éducatif 1">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8453.JPG" alt="Éducatif 2">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8454.JPG" alt="Éducatif 3">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8455.JPG" alt="Éducatif 4">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8456.JPG" alt="Éducatif 5">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8457.JPG" alt="Éducatif 6">
+                        </div>
+                    </div>
+                    <button class="slider-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+ 
+            <div class="categorie-slider">
+                <h2>Activités sociales</h2>
+                <div class="slider-containeur">
+                    <div class="slider">
+                        <div class="slide-active">
+                            <img src="image /IMG_8461.JPG" alt="Social 1">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8462.JPG" alt="Social 2">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8463.JPG" alt="Social 3">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8464.JPG" alt="Social 4">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8465.JPG" alt="Social 5">
+                        </div>
+                        <div class="slide">
+                            <img src="image /IMG_8466.JPG" alt="Social 6">
+                        </div>
+                    </div>
+                    <button class="slider-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="pieds">
+            <div class="machin">
+                <h3 class="titre">DAMEHOOD</h3>
+                <p class="description">Un réseau solidaire de femmes engagées pour transformer leur quartier chaque dimanche.<br>Rejoignez-nous pour partager, apprendre, agir et inspirer !</p>
+            </div>
+                <div class="machin">
+                    <h3 class="title">Contact</h3>
+                    <div class="footer-contact">
+                        <p>femmesduquartier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bas-pied">
+                <p>© 2025 les femmes du quartier - Tous droits réservés</p>
+            </div>
+        </footer>
+         <script>
+            
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('nav-links').classList.toggle('ouvert');
+            });
+
+             document.addEventListener('DOMContentLoaded', function() {
+                 
+                 function initSlider(sliderContaineur) {
+                     const slides = sliderContaineur.querySelectorAll('.slide');
+                     const dotsContainer = sliderContaineur.querySelector('.slider-dots');
+                     const prevBtn = sliderContaineur.querySelector('.prev');
+                     const nextBtn = sliderContaineur.querySelector('.next');
+                     let currentSlide = 0;
+ 
+                     
+                     slides.forEach((_, index) => {
+                         const dot = document.createElement('span');
+                         dot.classList.add('dot');
+                         if (index === 0) dot.classList.add('active');
+                         dotsContainer.appendChild(dot);
+                     });
+ 
+                     const dots = dotsContainer.querySelectorAll('.dot');
+ 
+                     function showSlide(n) {
+                         slides.forEach(slide => slide.classList.remove('active'));
+                         dots.forEach(dot => dot.classList.remove('active'));
+                         
+                         currentSlide = (n + slides.length) % slides.length;
+                         
+                         slides[currentSlide].classList.add('active');
+                         dots[currentSlide].classList.add('active');
+                     }
+ 
+                     function nextSlide() {
+                         showSlide(currentSlide + 1);
+                     }
+ 
+                     function prevSlide() {
+                         showSlide(currentSlide - 1);
+                     }
+ 
+                     
+                     let slideInterval = setInterval(nextSlide, 5000);
+ 
+                     
+                     nextBtn.addEventListener('click', () => {
+                         clearInterval(slideInterval);
+                         nextSlide();
+                         slideInterval = setInterval(nextSlide, 5000);
+                     });
+ 
+                     prevBtn.addEventListener('click', () => {
+                         clearInterval(slideInterval);
+                         prevSlide();
+                         slideInterval = setInterval(nextSlide, 5000);
+                     });
+ 
+                     dots.forEach((dot, index) => {
+                         dot.addEventListener('click', () => {
+                             clearInterval(slideInterval);
+                             showSlide(index);
+                             slideInterval = setInterval(nextSlide, 5000);
+                         });
+                     });
+                 }
+ 
+                 // Initialiser tous les sliders
+                 document.querySelectorAll('.slider-containeur').forEach(initSlider);
+             });
+         </script>
+     </body>
+ </html>

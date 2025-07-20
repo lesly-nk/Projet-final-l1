@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>À propos - les travaux des dames du quartier</title>
+        <link href="indexx.css" rel="stylesheet">
+    <style>
+        .conteneur{
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 900px;
+    font-family: 'Poppins',sans serif;
+    color: #333;
+    text-align: center;
+}
+
+.intro-conteneur h2{
+font-size: 2rem;
+color: #00695c;
+margin-bottom: 1rem;
+letter-spacing: 0.05em;
+}
+.intro-conteneur p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.intro-conteneur strong{
+color: #004d40;
+}
+.elements {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 2.5rem;
+}
+.nom-responsable {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.80); 
+    color: #fff;
+    font-size: 1.12rem;
+    font-weight: 700; 
+    padding: 0.7rem 1rem 0.6rem 1rem;
+    border-radius: 0 0 18px 18px;
+    text-align: center;
+    z-index: 2;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 1px 0 #222; 
+}
+.cadre{
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+.image-carte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    background: #f7fafc;
+}
+.image-carte {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+    padding: 2.2em 2em 2.7em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.2em;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    min-height: 420px;
+    font-size: 1em;
+}
+.image-carte:hover {
+    box-shadow: 0 12px 36px rgba(44,83,131,0.16);
+    transform: translateY(-4px) scale(1.02);
+    
+}
+.cadre:hover  {
+    opacity: 1;
+}
+.atelier {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.atelier h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.atelier p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+.assistante {
+    color: #c59d5f;
+    font-size: 0.98em;
+    margin-bottom: 0.7em;
+    font-style: italic;
+    font-weight: normal;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    letter-spacing: normal;
+    box-shadow: none;
+    display: block;
+    margin-top: 0;
+}
+
+.mir-les {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.mir-les h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+}
+.cloche {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.boss {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    width: 22%;
+    min-width: 220px;
+    box-sizing: border-box;
+}
+.boss:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    transform: scale(1.1);
+}
+.boss h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.boss p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+    </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <nav>
+                    <div class="accueil">
+                      <h2 class="damehood-title">DAMEHOOD</h2>
+                    </div>
+                    <button class="hamburger" id="hamburger">&#9776;</button>
+                    <div class="liens" id="nav-links">
+                      <a href="indexx.html">Accueil</a>
+                      <a href="propos.html">À propos</a>
+                      <a href="activite.html">Nos activités</a>
+                      <a href="galerie.html">Galerie</a>
+                      <a href="programmes.html">Programme</a>
+                      <a href="formulaire.html">Formulaire</a>
+                    </div>
+                  </nav>                  
+                
+            </nav>
+        </header>
+            <div class="conteneur">
+                <div class="intro-conteneur">
+                    <h2>BIENVENUE DANS NOTRE SITE !</h2>
+                    <p>Ici commence une belle aventure portée par l'énergie,la solidarité et le talent des femmes de notre quartier.</p>
+                    <p>Chaque dimanche, nous nous réunissons pour transformer notre environnement, partager nos savoir-faire et renforcer notre communauté.
+                        les travaux du Dimanche,c'est plus qu'un simple rendez-vous:<br>c'est un mouvement local,une famille en action, un engagement hebdomadaire pour le bien commun.</p>
+                    <p><strong>Un dimanche, une action, une transformation</strong></p>
+                    <p>À chaque rencontre, un projet collectif :</p>
+                </div>
+           </div>
+        <div class="elements">
+            <div class="cadre">
+                <div class="image-carte">
+                    <img src="image /6b8d8e39-9f4a-4e91-89bd-307ea0683b2c.jpg">
+                    <div class="nom-responsable">Madame Magnificat</div>
+                </div>
+                <div class="atelier">
+                    <h3>Atelier de lecture partagée</h3>
+                    <p>Partagez le plaisir de la lecture en groupe, échangez sur vos coups de cœur littéraires et découvrez de nouveaux horizons.</p>
+                    <div class="assistante">Assistante : <strong>Madame Olivia</strong></div>
+                </div>
+            </div>
+
+            <div class="cadre">
+                <div class="image-carte">
+                    <img src="image /f1395c9d-94b4-4b86-965a-3847a198f07d .jpg" alt="Activité cuisine">
+                    <div class="nom-responsable">Madame Deberthe</div>
+                </div>
+                <div class="atelier">
+                    <h3>Atelier cuisine collective</h3>
+                    <p>Apprenez et partagez des recettes traditionnelles et modernes dans une ambiance conviviale et chaleureuse.</p>
+                    <div class="assistante">Assistante : <strong>Madame Emmanuella</strong></div>
+                </div>
+            </div>
+
+            <div class="cadre">
+                <div class="image-carte">
+                    <img src="image /IMG_9188.jpg" alt="Activité jardinage">
+                    <div class="nom-responsable">Madame Lisa</div>
+                </div>
+                <div class="atelier">
+                    <h3>Jardinage collectif</h3>
+                    <p>Cultivez ensemble un jardin partagé, apprenez les techniques de jardinage et embellissez votre quartier.</p>
+                    <div class="assistante">Assistante : <strong>Madame Gemima</strong></div>
+                </div>
+            </div>
+
+            <div class="cadre">
+                <div class="image-carte">
+                    <img src="image /6f1d26cd-642a-4d6d-87f3-b9ff489d7d40.jpg" alt="Activité couture">
+                    <div class="nom-responsable">Madame Daniela</div>
+                </div>
+                <div class="atelier">
+                    <h3>Atelier couture créative</h3>
+                    <p>Créez des vêtements uniques, recyclez vos tissus et développez vos compétences en couture.</p>
+                    <div class="assistante">Assistante : <strong>Madame Eliada</strong></div>
+                </div>
+            </div>
+
+            <div class="cadre">
+                <div class="image-carte">
+                    <img src="image /IMG_9189.jpg" alt="Activité bien-être">
+                    <div class="nom-responsable">Madame Noella</div>
+                </div>
+                <div class="atelier">
+                    <h3>Atelier bien-être</h3>
+                    <p>Détendez-vous avec des séances de relaxation, yoga et conseils pour votre bien-être quotidien.</p>
+                    <div class="assistante">Assistante : <strong>Madame Esther</strong></div>
+                </div>
+            </div>
+
+            <div class="cadre">
+                <div class="image-carte">
+                    <img src="image /IMG_9187.jpg" alt="Activité bricolage">
+                    <div class="nom-responsable">Madame Leïla</div>
+                </div>
+                <div class="atelier">
+                    <h3>Atelier bricolage</h3>
+                    <p>Réalisez des projets manuels, réparez et transformez des objets du quotidien.</p>
+                    <div class="assistante">Assistante : <strong>Madame Leïla</strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="mir-les">
+            <h2>Pourquoi ce site ?</h2>
+            <div class="cloche">
+                <div class="boss">
+                    <h3>Créer du lien social</h3>
+                    <p>Rassembler les femmes du quartier autour d'activités communes pour renforcer la cohésion sociale et créer des amitiés durables.</p>
+                </div>
+
+                <div class="boss">
+                    <h3>Partager nos savoirs</h3>
+                    <p>Chacune apporte ses compétences et ses expériences pour enrichir le groupe et transmettre des connaissances précieuses.</p>
+                </div>
+
+                <div class="boss">
+                    <h3>Améliorer notre quartier</h3>
+                    <p>Agir concrètement pour embellir et améliorer notre environnement quotidien, en créant un quartier plus agréable à vivre.</p>
+                </div>
+
+                <div class="boss">
+                    <h3>Inspirer d'autres initiatives</h3>
+                    <p>Montrer qu'il est possible de créer du changement positif à l'échelle locale et encourager d'autres quartiers à s'organiser.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="pieds">
+                <div class="machin">
+                <h3 class="titre">DAMEHOOD</h3>
+                <p class="description">Un réseau solidaire de femmes engagées pour transformer leur quartier chaque dimanche.<br>Rejoignez-nous pour partager, apprendre, agir et inspirer !</p>
+            </div>
+                <div class="machin">
+                    <h3 class="title">Contact</h3>
+                    <div class="footer-contact">
+                        <p>femmesduquartier@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bas-pied">
+                <p>© 2025 les femmes du quartier - Tous droits réservés</p>
+            </div>
+        </footer>
+        <script>
+            document.getElementById('hamburger').addEventListener('click', function() {
+       document.getElementById('nav-links').classList.toggle('ouvert');
+        });
+            
+          </script>
+          
+    </body>
+</html>
+        
+    
